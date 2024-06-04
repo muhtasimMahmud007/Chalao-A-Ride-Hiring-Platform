@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Information</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      
+      #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      #user-info {
+        text-align: center;
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 50px;
+        background-color: #368BC1;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      li {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div id="container">
+      <div id="user-info">
+        <h1>Welcome, {{ request.user.Driver_name }}!</h1>
+
+        <p>Here is your user information:</p>
+
+        <ul>
+          <li>User ID: {{ request.user.user_id }}</li>
+          <li>National ID: {{ request.user.NID }}</li>
+          <li>Email: {{ request.user.email }}</li>
+          <li>Phone: {{ request.user.phone }}</li>
+          <li>Lincense Number: {{ request.user.license_no }}</li>
+          <li>Lincense Renewed: {{ request.user.license_renewed }}</li>
+          <li>Specialization: {{ request.user.specialization }}</li>
+          <li>Experience: {{ request.user.experience }}</li>
+          <li>Address: {{ request.user.address }}</li>
+        </ul>
+        <button type="submit"><a href="{% url 'e_home' %}" class="btn btn-primary">Back</a></button>
+        <button type="submit"><a href="#" class="btn btn-primary">Edit</a></button>
+        <button type="submit"><a href="#" class="btn btn-primary">Delete</a></button>
+      </div>
+    </div>
+  </body>
+</html>

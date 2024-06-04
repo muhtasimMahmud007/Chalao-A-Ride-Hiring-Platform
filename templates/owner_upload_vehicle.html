@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Vehicle</title>
+</head>
+<body>
+    <h1>Upload Vehicle</h1>
+    {% if Message %}
+        <h2>{{ Message }}</h2>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2>Welcome sir!!</h2>
+        <h2>Please Enter Vehicle</h2>
+
+        <label for="license">License</label>
+        <input type="text" placeholder="License Plate" name="license" id="license">
+
+        <label for="vid">Vehivle ID</label>
+        <input type="text" placeholder="Vehicle ID" name="vid" id="vid">
+
+        <label for="fit">Fitness Status</label>
+        <input type="text" placeholder="Status" name="fit" id="fit">        
+
+
+        <label for="comp">Brand</label>
+        <input type="text" placeholder="Brand" name="comp" id="comp">
+
+        <label for="color">Colour</label>
+        <input type="text" placeholder="Phone 1" name="color" id="color"> 
+
+
+        <label for="year">Year Model</label>
+        <input type="text" placeholder="Year" name="year" id="year"> 
+
+        <label for="type">Vehicle Type</label>
+        <input type="text" placeholder="Type" name="type" id="type"> 
+
+        <label for="cap">Capacity Info</label>
+        <input type="text" placeholder="Capcity" name="cap" id="cap">
+
+        <label for="mile">Milage</label>
+        <input type="text" placeholder="Milage" name="mile" id="mile">           
+
+        <label for="ton">Tonnage</label>
+        <input type="text" placeholder="Tonnage" name="ton" id="ton">      
+
+
+        <label for="axis">Total Axis</label>
+        <input type="text" placeholder="Axis" id="axis" name="axis">
+
+
+        <label for="owner">Submitted by</label>
+        <input type="text" placeholder="Name" id="owner" name="owner">
+
+
+        <label for="gear">Geared or Non-Geared</label>
+        <input type="text" placeholder="Geared or Non-Geared" id="gear" name="gear">
+
+        <label for="desc">Description</label>
+        <input type="text" placeholder="Description" id="desc" name="desc">
+        <label for="price">Total Price</label>
+        <input type="text" placeholder="Amount" id="price" name="price">
+        <button type="submit">Done</button>
+        
+        <a href="{% url 'v_profile' %}" >Show Vehicle</a>
+
+    </form>
+</body>
+</html>

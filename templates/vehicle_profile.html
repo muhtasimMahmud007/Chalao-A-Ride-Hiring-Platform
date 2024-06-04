@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Profiles</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        table td:first-child {
+            font-weight: bold;
+        }
+
+        table td:last-child {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vehicle Profiles</h1>
+    <h1>Below are the details of the vehicles: </h1>
+    {% for vehicle in vehicles %}
+    <table>
+        <tr>
+            <td><strong>Vehicle License:</strong></td>
+            <td>{{ vehicle.Vehicle_license_plate }}</td>
+        </tr>
+        <tr>
+            <td><strong>Vehicle Id:</strong></td>
+            <td>{{ vehicle.Vehicle_id }}</td>
+        </tr>
+        <tr>
+            <td><strong>Vehicle Fitness:</strong></td>
+            <td>{{ vehicle.Vehicle_fitness}}</td>
+        </tr>
+        <tr>
+            <td><strong>Vehicle Brand:</strong></td>
+            <td>{{ vehicle.Vehicle_company }}</td>
+        </tr>
+        <tr>
+            <td><strong>Vehicle Colour:</strong></td>
+            <td>{{ vehicle.Vehicle_colour }}</td>
+        </tr>
+        <tr>
+            <td><strong>Year of Model:</strong></td>
+            <td>{{ vehicle.Vehicle_model_year}}</td>
+        </tr>
+        <tr>
+            <td><strong>Vehicle Type:</strong></td>
+            <td>{{ vehicle.Vehicle_type }}</td>
+        </tr>
+        <tr>
+            <td><strong>Capacity:</strong></td>
+            <td>{{ vehicle.Vehicle_capcity }}</td>
+        </tr>
+        <tr>
+            <td><strong>Milage:</strong></td>
+            <td>{{ vehicle.Vehicle_milage }}</td>
+        </tr>
+        <tr>
+            <td><strong>Speed</strong></td>
+            <td>{{ vehicle.Vehicle_speed }}</td>
+        </tr>
+        <tr>
+            <td><strong>Tonnage</strong></td>
+            <td>{{ vehicle.Vehicle_tonage }}</td>
+        </tr>
+        <tr>
+            <td><strong>Total Axis</strong></td>
+            <td>{{ vehicle.Vehicle_total_axis }}</td>
+        </tr>
+        <tr>
+            <td><strong>Owner</strong></td>
+            <td>{{ vehicle.Vehicle_uploaded_by }}</td>
+        </tr>
+        <tr>
+            <td><strong>Geared or not</strong></td>
+            <td>{{ vehicle.isGeared }}</td>
+        </tr>
+        <tr>
+            <td><strong>Description</strong></td>
+            <td>{{ vehicle.Vehicle_description }}</td>
+        </tr>
+        <tr>
+            <td><strong>Total Price</strong></td>
+            <td>{{ vehicle.Vehicle_price }}</td>
+        </tr>
+    </table>
+    {% endfor %}
+</body>
+</html>
+
