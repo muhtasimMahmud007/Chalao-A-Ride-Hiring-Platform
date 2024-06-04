@@ -1,1 +1,2 @@
 # Chalao-A-Ride-Hiring-Platform
+This is a web platform with a Django framework that is intended for ride hiring. Both drivers and customers can establish profiles and log in and out of their accounts as well as create new ones here. Administrators have access to a list of the registered cars. Clients are able to reserve cars based on their preferences. A custom auth controller has been implemented with sql database.
